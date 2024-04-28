@@ -1,0 +1,43 @@
+Water Jug Riddle Solver
+
+Implementation Details
+The code consists of two main parts:
+
+Water Jug Solver Algorithm: The core logic for solving the Water Jug Riddle is implemented in the solveWaterJugRiddle function located in the WaterJugBackend.ts file. This function takes three parameters:
+x_capacity: The capacity of the first jug (jug X).
+y_capacity: The capacity of the second jug (jug Y).
+z_amount_wanted: The desired amount of water to be measured out.
+The function returns an array of steps (Step[]) representing the actions taken to achieve the desired amount of water, or null if no solution is possible.
+Express.js Server: The code also includes an Express.js server to provide an API endpoint for solving the Water Jug Riddle. The server is implemented in the app.ts file and exposes a POST endpoint /solve-water-jug-riddle to receive input data and return solutions or error messages.
+How to Run
+To run the code, follow these steps:
+
+Clone the Repository: Clone this repository to your local machine using Git:
+bash
+Copy code
+git clone <repository-url>
+Install Dependencies: Navigate to the project directory and install the dependencies using npm:
+Copy code
+npm install
+Run the Server: Start the Express.js server by running the following command:
+sql
+Copy code
+npm start
+Make API Requests: You can now make POST requests to the /solve-water-jug-riddle endpoint to solve the Water Jug Riddle problem. Send a JSON payload in the request body with the following format:
+json
+Copy code
+{
+    "x_capacity": <x_capacity>,
+    "y_capacity": <y_capacity>,
+    "z_amount_wanted": <z_amount_wanted>
+}
+Running Tests
+To run the automated tests for this codebase, execute the following command:
+
+bash
+Copy code
+npm test
+This will run the test suite which includes both unit tests for the algorithm logic and integration tests for the Express.js server endpoints.
+
+Test Coverage
+The tests cover various scenarios including valid inputs, impossible scenarios, and handling of negative or non-integer inputs to ensure robustness and correctness of the solution.
